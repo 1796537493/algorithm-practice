@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+void push(int n,int &top,int ar[],int x){
+    if(top==n){cout<<"错误：栈已满。"<<endl;}
+    else{
+        ar[top]=x;
+        top++;
+    }
+}
+void get(int top,int ar[]){
+    if(top!=0){
+    cout<<ar[--top]<<endl;
+    }
+    else{
+        cout<<"错误：栈为空。"<<endl;
+        cout<<"-1";
+    }
+}
+void pop(int &top,int ar[],int n){
+        if(top=0){
+            cout<<"错误：栈为空。"<<endl;
+        }
+        else{
+            top--;
+        }
+}
+int main(){
+    int n;
+    cin>>n;
+    int *ar=new int[n];
+    int top=0;
+    for(int i=0;i<=n;i++){
+        int x;
+        cin>>x;
+        push(n,top,ar,x);
+    }
+    for(int i=0;i<n;i++){
+        pop(top,ar,n);
+        get(top,ar);
+    }
+}
