@@ -7,11 +7,26 @@ struct treenode {
 	treenode(int x):val(x),left(nullptr),right(nullptr){}
 	treenode(){}
 };
+//前序遍历
 void preorder(treenode *root) {
 	if (root == nullptr) { return; }
 	cout << root->val << endl;
 	preorder(root->left);
 	preorder(root->right);
+}
+//中序遍历
+void inorder(treenode *root) {
+	if (root == nullptr) { return; }
+	inorder(root->left);
+	cout << root->val << endl;
+	inorder(root->right);
+}
+//后序遍历
+void postorder(treenode *root) {
+	if (root == nullptr) { return; }
+	postorder(root->left);
+	postorder(root->right);
+	cout << root->val << endl;
 }
 int main() {
 	treenode *A = new treenode(1);
