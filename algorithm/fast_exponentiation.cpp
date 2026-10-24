@@ -1,3 +1,4 @@
+//快速幂算法
 #include<iostream>
 using namespace std;
 
