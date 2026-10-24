@@ -7,6 +7,7 @@ struct treenode {
 	treenode(int x):val(x),left(nullptr),right(nullptr){}
 	treenode(){}
 };
+
 //前序遍历
 void preorder(treenode *root) {
 	if (root == nullptr) { return; }
